@@ -1,0 +1,80 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+
+html {
+    line-height: 1;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, arial, sans-serif;
+    background-color: #fff;
+    color: #5F6C72;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+ul {
+    line-height: 1.75em;
+    margin: 0 0 20px;
+}
+
+a {
+    color: #499DF3;
+    text-decoration: none;
+}
+
+h1 {
+    color: #354147;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0;
+}
+
+h3 {
+    color: #354147;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 600;
+    padding: 0 0 0.5em 0;
+}
+
+p {
+    line-height: 1.6em;
+    margin: 0 0 15px;
+}
+
+button.flat, button.normal, button.tertiary, input[type='submit'].flat, input[type='submit'].normal, input[type='submit'].tertiary, .button.flat, .button.normal, .button.tertiary, a.pill-button.flat, a.pill-button.normal, a.pill-button.tertiary {
+    background-image: none;
+    background-color: #eef0f2;
+    color: #354147;
+    border-color: transparent;
+}
+

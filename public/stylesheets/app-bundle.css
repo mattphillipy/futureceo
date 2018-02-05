@@ -1,0 +1,100 @@
+.join-hero {
+    background: linear-gradient(180deg,#000033,#00004d);
+    background-size: 2500px 700px,100%;
+    padding: 4em 0;
+}
+
+.join-hero--top-margin {
+    margin-top: 5em;
+}
+
+.join-hero__container {
+    overflow: hidden;
+}
+
+.join-hero__cta:first-child, .join-hero__form:first-child {
+    margin-left: 0;
+}
+
+.join-hero__cta, .join-hero__form {
+    float: left;
+    margin-left: 4%;
+    /*width: 48%;*/
+}
+
+.join-hero__form-container {
+    margin-left: auto;
+    max-width: 424px;
+}
+
+.join-hero__title {
+    color: #fff;
+    font-size: 2.0em;
+    font-weight: 300;
+    margin-bottom: 1.75em;
+    padding: 0;
+}
+
+.join-hero__description {
+    color: #fff;
+    color: hsla(0,0%,100%,.7);
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+.join-form {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(95,108,114,.08), 0 2px 18px rgba(95,108,114,.18);
+    padding: 1.5em;
+}
+
+.join-form__nested {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -1.5%;
+}
+
+.join-form__nested-input {
+    flex: 1 0 140px;
+    margin: 0 1.5%;
+}
+
+.text-input.text-input--large {
+    padding: 12px;
+}
+
+.join-form__checkbox {
+    margin-bottom: 1em;
+}
+
+.join-form__join-terms {
+    color: #969ea2;
+    margin-bottom: 0;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.async-button {
+    position: relative;
+}
+
+.join-form__join-terms {
+    color: #969ea2;
+    margin-bottom: 0;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.sign-in__cta:first-child, .sign-in-hero__form:first-child {
+    margin: 0 auto;
+}
+
+.sign-in-hero__cta, .sign-in-hero__form {
+    width: 40%;
+}
+
+.sign-in-logo {
+   text-align: center;
+}
+

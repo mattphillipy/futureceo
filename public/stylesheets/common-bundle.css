@@ -1,0 +1,57 @@
+.page-section--padded-horz {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page-section {
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.button.button--large {
+    font-size: 1.3rem;
+    /*padding: 1.0em;*/
+}
+
+.button.button--block {
+    width: 100%;
+}
+
+.button.button--important {
+    text-align: center;
+    background: #4D4D00;
+    color: #fff;
+    border-color: transparent;
+}
+
+.button__inner {
+    display: flex;
+}
+
+.button.button--icon-only, .button__inner {
+    align-items: center;
+    justify-content: center;
+}
+
+.button.button--as-link, .button.button--as-link:focus, .button.button--as-link:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.button.button--as-link {
+    display: inline;
+    font-size: 1em;
+    font-weight: inherit;
+    padding: 0;
+    border: none;
+    color: inherit;
+    overflow: visible;
+    user-select: auto;
+    vertical-align: baseline;
+    white-space: inherit;
+    text-align: inherit;
+}
+
+.button.button--as-link .button__inner, .button.button--as-link .button__text {
+    display: inherit;
+}
