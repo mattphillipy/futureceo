@@ -14,12 +14,13 @@ var courseRoutes = require("./routes/courses"),
     indexRoutes = require("./routes/index")
     
 
-mongoose.connect("mongodb://localhost/futureceo");
+//mongoose.connect("mongodb://localhost/futureceo");
+mongoose.connect("mongodb://bill:bill@ds123410.mlab.com:23410/futureceo");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
-seedDB();
+//seedDB();
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -35,7 +36,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
-    
     next();
 });
 

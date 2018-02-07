@@ -78,3 +78,6 @@ button.flat, button.normal, button.tertiary, input[type='submit'].flat, input[ty
     border-color: transparent;
 }
 
+.async-button__text: {
+    font-size: 1.2em
+}

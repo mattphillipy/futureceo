@@ -225,3 +225,7 @@ form button, form .button {
 .description {
     margin: 0px;
 }
+
+.span .buttonbutton__text: {
+    font-size: 4em
+}
