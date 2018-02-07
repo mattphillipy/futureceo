@@ -17,12 +17,12 @@ router.get("/", function(req, res){
 });
 
 //NEW - show form to create course
-router.get("/new", function(req, res){
+router.get("/new", middleware.isLoggedIn, function(req, res){
     res.render("courses/new");
 });
 
 //CREATE - add new course to DB
-router.post("/", function(req, res){
+router.post("/", middleware.isLoggedIn, function(req, res){
      //get data from form and add to courses array
     var name = req.body.name;
     var category = req.body.category;
