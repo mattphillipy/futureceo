@@ -13,9 +13,9 @@ var express    = require("express"),
 var courseRoutes = require("./routes/courses"),
     indexRoutes = require("./routes/index")
     
+var url = process.env.DATABASEURL || "mongodb://localhost/futureceo"
+mongoose.connect(url);
 
-//mongoose.connect("mongodb://localhost/futureceo");
-mongoose.connect("mongodb://bill:bill@ds123410.mlab.com:23410/futureceo");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
