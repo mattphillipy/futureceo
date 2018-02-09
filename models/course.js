@@ -7,6 +7,12 @@ var courseSchema = new mongoose.Schema({
     series: String,
     image: String,
     description: String,
+    lessons: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Lesson"
+        }
+    ]
     
 });
 

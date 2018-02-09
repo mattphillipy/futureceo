@@ -1,5 +1,6 @@
 // all the middleware goes here
 var Course = require("../models/course");
+// var Comment = require("../models/comment");
 var Lesson = require("../models/lesson");
 var middlewareObj = {};
 

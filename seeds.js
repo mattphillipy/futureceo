@@ -17,13 +17,8 @@ var data = [
         image: "https://s3.amazonaws.com/futureceo.io/Media/Courses/Excel+Image.PNG",
         description:"Learn Modern Excel! "
     },
-    // {
-    //     name: "Kalaloch",
-    //     image: "http://nwtripfinder.com/wp-content/uploads/2011/05/kalalochbeach.jpg",
-    //     description:"It was the year of Our Lord one thousand seven hundred and seventy-five. Spiritual revelations were conceded to England at that favoured period, as at this. Mrs. Southcott had recently attained her five-and-twentieth blessed birthday, of whom a prophetic private in the Life Guards had heralded the sublime appearance by announcing that arrangements were made for the swallowing up of London and Westminster."
-    // }
+    
 ]
-
 
 function seedDB(){
     Course.remove({}, function(err){
@@ -31,20 +26,35 @@ function seedDB(){
             console.log(err);
         } else
         console.log("removed courses!");
-        //add a few campgrounds
+        //add a few courses
         data.forEach(function(seed){
             Course.create(seed, function(err, course){
                 if(err){
                     console.log(err)
                 } else {
                     console.log("added a course");
-                    
+                    //create a comment
+                    Lesson.create(
+                        {
+                            text: "seed lesson #1"
+                           
+                        }, function(err, lesson){
+                            if(err){
+                                console.log(err);
+                            } else {
+                                lesson.save();
+                                course.lessons.push(lesson._id);
+                                course.save();
+                                console.log("new comment created!");
+                            }
+                            
+                        });
                 }
             });
         });
     });
     
-    
+   
 }
 
 module.exports = seedDB;

@@ -1,37 +1,36 @@
 var express = require("express");
 var router  = express.Router({mergeParams: true});
 var Course = require("../models/course");
-var Lesson = require("../models/lesson");
+//var Comment= require("../models/comment");
 var middleware = require("../middleware")
 
-
-//Lessons new
+//Comments new
 router.get("/new", function(req, res){
-    // find course by id
+    // find campground by id
     console.log(req.params.id);
     Course.findById(req.params.id, function(err, course){
         if(err){
             console.log(err);
         } else {
-            res.render("lessons/new", {course: course});
+            res.render("comments/new", {course: course});
         }
     });
 });
 
 router.post("/", function(req, res){
-    //lookup course using ID
+    //lookup campground using ID
      Course.findById(req.params.id, function(err, course){
         if(err){
             console.log(err);
             res.redirect("/courses");
         } else {
-            Lesson.create(req.body.lesson, function(err, lesson){
+            Comment.create(req.body.comment, function(err, comment){
                 if(err){
                     console.log(err);
                 } else {
-                    //save lesson
-                    lesson.save();
-                    course.lessons.push(lesson._id);
+                    //save comment
+                    comment.save();
+                    course.comments.push(comment._id);
                     course.save();
                     res.redirect('/courses/' + course._id);
                 }

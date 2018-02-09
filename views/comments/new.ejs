@@ -1,12 +1,11 @@
 
-
 <div class="container">
     <div class="row">
-        <h1 style="text-align: center">Add a New Lesson to <%= course.name %></h1>
+        <h1 style="text-align: center">Add New Comment to <%= course.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/courses/<%= course._id %>/lessons" method="POST">
+            <form action="/courses/<%= course._id %>/comments" method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="lesson[text]" placeholder="text">
+                    <input class="form-control" type="text" name="comment[text]" placeholder="text">
                 </div>
                 
                 
@@ -20,4 +19,3 @@
     </div>
 
 </div>
-
