@@ -6,7 +6,7 @@ var middleware = require("../middleware")
 
 
 //Lessons new
-router.get("/new", function(req, res){
+router.get("/new", middleware.isLoggedIn, function(req, res){
     // find course by id
     console.log(req.params.id);
     Course.findById(req.params.id, function(err, course){
@@ -18,7 +18,7 @@ router.get("/new", function(req, res){
     });
 });
 
-router.post("/", function(req, res){
+router.post("/",  middleware.isLoggedIn, function(req, res){
     //lookup course using ID
      Course.findById(req.params.id, function(err, course){
         if(err){
