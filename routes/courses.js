@@ -30,6 +30,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     var desc = req.body.description;
     var image = req.body.image;
     
+    
     var newCourse = {name: name, category: category, series: series, description: desc, image: image, };
     // Create a new course and save to database
     Course.create(newCourse, function(err, newlyCreated){
@@ -46,7 +47,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 // SHOW - shows more info about one course
 router.get("/:id", function(req, res){
     //find the course with provided ID
-    Course.findById(req.params.id).exec(function(err, foundCourse){
+    Course.findById(req.params.id).populate("lessons").exec(function(err, foundCourse){
         if(err){
             console.log(err);
         } else {

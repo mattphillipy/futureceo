@@ -1,9 +1,6 @@
 
-<div class="container">
+
     <h1>this is the individual course SHOW Page</h1>
-    <div class="col-md-9">
-          
-    </div>
     <h2>RESTful Route</h2>
         <h4>Purpose: Show course details and lessons</h4>
         <h4>Route Name: Show </h4>
@@ -15,9 +12,23 @@
         <h4></h4>
         
     <div class="text-right">
-                <a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Comments</a>
+        <a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Comments</a>
     </div>
-                    
-                
-</div>
+    <hr>
+    <% course.lessons.forEach(function(lesson){ %>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <p>
+                            <%=lesson.text %>
+                        </p>
+                    </div>
+                </div>
+             <% }) %>
+            
+            
+
+    
+    
+   
 
