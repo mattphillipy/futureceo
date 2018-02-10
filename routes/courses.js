@@ -58,5 +58,12 @@ router.get("/:id", function(req, res){
     });
 });
 
+// EDIT COURSE ROUTE
+router.get("/:id/edit", function(req, res){
+    Course.findById(req.params.id, function(err, foundCourse){
+        res.render("courses/edit", {course: foundCourse});
+    });
+});
+
 
 module.exports = router;
