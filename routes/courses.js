@@ -65,5 +65,17 @@ router.get("/:id/edit", function(req, res){
     });
 });
 
+//UPDATE COURSE ROUTE
+router.put("/:id", function(req, res){
+   // find and update the correct campground
+   Course.findByIdAndUpdate(req.params.id, req.body.course, function(err, updatedCourse){
+        if(err){
+            res.redirect("/courses");
+        } else {
+            res.redirect("/courses/" + req.params.id);
+        }
+    });
+});
+
 
 module.exports = router;
