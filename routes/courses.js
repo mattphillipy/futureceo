@@ -77,5 +77,17 @@ router.put("/:id", function(req, res){
     });
 });
 
+// DESTROY CAMPGROUND ROUTE
+router.delete("/:id", function(req, res){
+   Course.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            res.redirect("/courses")
+        } else {
+            //req.flash("error", "Course deleted!");
+            res.redirect("/courses");
+        }
+    });
+});
+
 
 module.exports = router;

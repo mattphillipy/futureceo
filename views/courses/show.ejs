@@ -11,12 +11,13 @@
         <p>  <%=course.series %>  </p>
         <p>  <%=course.description %>  </p>
         <a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT</a>
+        <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>    
+        </form>
         <h4></h4>
-        
-    <div class="text-right">
-        <a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Lessons</a>
-    </div>
+    
     <hr>
+    <span class="pull-left"><a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Lessons</a></span>
     <% course.lessons.forEach(function(lesson){ %>
                 <div class="row">
                     <div class="col-md-12">
