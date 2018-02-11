@@ -18,6 +18,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
     });
 });
 
+//CREATE LESSONS ROUTE
 router.post("/",  middleware.isLoggedIn, function(req, res){
     //lookup course using ID
      Course.findById(req.params.id, function(err, course){
@@ -36,7 +37,29 @@ router.post("/",  middleware.isLoggedIn, function(req, res){
                     res.redirect('/courses/' + course._id);
                 }
             });
-            
+        }
+    });
+});
+
+// EDIT LESSONS ROUTE
+router.get("/:lesson_id/edit", function(req, res){
+   Lesson.findById(req.params.lesson_id, function(err, foundLesson){
+       if(err){
+           res.redirect("back");
+       } else {
+           res.render("lessons/edit", {course_id: req.params.id, lesson: foundLesson});
+       }
+   })
+   
+});
+
+//UPDATE LESSONS ROUTE
+router.put("/:lesson_id", function(req, res){
+    Lesson.findByIdAndUpdate(req.params.lesson_id, req.body.lesson, function(err, updatedLesson){
+        if(err){
+            res.redirect("back");
+        } else {
+            res.redirect("/courses/" + req.params.id);
         }
     });
 });

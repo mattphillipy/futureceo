@@ -1,8 +1,6 @@
 <% include ../partials/header %>
 
-<hr>
-<hr>
-<hr>
+
 
     <h1>this is the individual course SHOW Page</h1>
     <h2>RESTful Route</h2>
@@ -25,7 +23,9 @@
                         <p>
                             <%=lesson.text %>
                         </p>
-                    </div>
+                        <a class="btn btn-xs btn-warning" 
+                            href="/courses/<%= course._id %>/lessons/<%=lesson._id %>/edit">Edit </a>
+                        </div>
                 </div>
              <% }) %>
              
