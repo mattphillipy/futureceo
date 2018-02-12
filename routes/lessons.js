@@ -42,7 +42,7 @@ router.post("/",  middleware.isLoggedIn, function(req, res){
 });
 
 // EDIT LESSONS ROUTE
-router.get("/:lesson_id/edit", function(req, res){
+router.get("/:lesson_id/edit", middleware.isLoggedIn, function(req, res){
    Lesson.findById(req.params.lesson_id, function(err, foundLesson){
        if(err){
            res.redirect("back");
@@ -54,7 +54,7 @@ router.get("/:lesson_id/edit", function(req, res){
 });
 
 //UPDATE LESSONS ROUTE
-router.put("/:lesson_id", function(req, res){
+router.put("/:lesson_id", middleware.isLoggedIn, function(req, res){
     Lesson.findByIdAndUpdate(req.params.lesson_id, req.body.lesson, function(err, updatedLesson){
         if(err){
             res.redirect("back");

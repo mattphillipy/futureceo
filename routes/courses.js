@@ -59,14 +59,14 @@ router.get("/:id", function(req, res){
 });
 
 // EDIT COURSE ROUTE
-router.get("/:id/edit", function(req, res){
+router.get("/:id/edit", middleware.isLoggedIn, function(req, res){
     Course.findById(req.params.id, function(err, foundCourse){
         res.render("courses/edit", {course: foundCourse});
     });
 });
 
 //UPDATE COURSE ROUTE
-router.put("/:id", function(req, res){
+router.put("/:id", middleware.isLoggedIn, function(req, res){
    // find and update the correct campground
    Course.findByIdAndUpdate(req.params.id, req.body.course, function(err, updatedCourse){
         if(err){
@@ -78,7 +78,7 @@ router.put("/:id", function(req, res){
 });
 
 // DESTROY CAMPGROUND ROUTE
-router.delete("/:id", function(req, res){
+router.delete("/:id", middleware.isLoggedIn, function(req, res){
    Course.findByIdAndRemove(req.params.id, function(err){
         if(err){
             res.redirect("/courses")
