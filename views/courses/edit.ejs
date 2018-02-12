@@ -1,15 +1,19 @@
 <% include ../partials/header %>
 
-<hr>
-<hr>
-<hr>
 <div class="container">
     <div class="row">
         <h1 style="text-align: center">Edit <%= course.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
             <form action="/courses/<%= course._id%>?_method=PUT" method="POST">
+                <h4 style="text-align: left"><strong>Purpose #1: </strong>Show form to update details in Mongo "courses" collection </h4>
+                <h4 style="text-align: left"><strong>Path: </strong> courses/:id/edit </h4>
+                <h4 style="text-align: left"><strong>HTTP Verb: </strong> GET</h4>
+                <h4 style="text-align: left"><strong>Mongo Collection: </strong> N/A</h4>
+                <h4 style="text-align: left"><strong>Mongoose Path: </strong> N/A ()</h4>
+                
                 <div class="form-group">
-                    <input class="form-control" type="text" name="course[name]" value="<%= course.name %>">
+                    
+                    <span>Course Name: </span> <input class="form-control" type="text" name="course[name]" value="<%= course.name %>">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="course[category]" value="<%= course.category %>" >
@@ -27,7 +31,14 @@
                      <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                 </div>
             </form>
+            <h4 style="text-align: left"><strong>Purpose #2: </strong> Update indivdual course in Mongo "courses" collection </h4>
+            <h4 style="text-align: left"><strong>Path: </strong>courses/:id </h4>
+            <h4 style="text-align: left"><strong>HTTP Verb: </strong> PUT using method-overridee</h4>
+            <h4 style="text-align: left"><strong>Mongo Collection: </strong> courses</h4>
+            <h4 style="text-align: left"><strong>Mongoose Path: </strong>Course.findByIdAndUpdate()</h4>
+            <a href="/courses">Go Back Courses Main Page</a>
             <a href="/courses">Go Back</a>
+            
         </div>
 
     </div>

@@ -2,12 +2,17 @@
 
 
 
-    <h1>this is the individual course SHOW Page</h1>
-    <h2>RESTful Route</h2>
-        <p>  <%=course.name %>  </p>
-        <p>  <%=course.category %>  </p>
-        <p>  <%=course.series %>  </p>
-        <p>  <%=course.description %>  </p>
+    <h4 style="text-align:left"><strong>Purpose #1:  </strong> SHOW details for one specific course in Mongo "courses" and "lessons" collections </h4>
+    <h4 style="text-align: left"><strong>Path: </strong> courses/:id </h4>
+    <h4 style="text-align: left"><strong>HTTP Verb: </strong>Get</h4>
+    <h4 style="text-align: left"><strong>Mongo Collection: </strong>courses, lessons</h4>
+    <h4 style="text-align: left"><strong>Mongoose Path: </strong>Course.findById</h4>
+    <hr>
+    <hr>
+    <p> <strong>Course Name: </strong>  <%=course.name %>  </p>
+        <p> <strong>Category:</strong>  <%=course.category %>  </p>
+        <p> <strong>Series</strong> <%=course.series %>  </p>
+        <p> <strong>Description: </strong> <%=course.description %>  </p>
         <a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT</a>
         <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
             <button class="btn btn-danger">Delete</button>    

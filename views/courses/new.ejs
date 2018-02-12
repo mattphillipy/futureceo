@@ -5,17 +5,15 @@
 <hr>
 <div class="container">
     <div class="row">
-        <h2 style="text-align: center"></h2>
-        <h2 style="text-align: center">RESTful Route</h2>
-        <h4 style="text-align: center">Purpose #1: Show form to add a new course </h4>
-        <h4 style="text-align: center">Route Name: New </h4>
-        <h4 style="text-align: center">Path: /courses/new </h4>
-        <h4 style="text-align: center">CRUD: Read</h4>
-        <h4 style="text-align: center">HTTP Verb: GET</h4>
-        <h4 style="text-align: center">Mongo Collection: N/A</h4>
-        <h4 style="text-align: center">Mongoose Path: N/A ()</h4>
+        <h2 style="text-align: left"></h2>
+        
         <div style="width: 30%; margin: 25px auto;">
             <form action="/courses" method="POST">
+                <h4 style="text-align: left"><strong>Purpose #1: </strong>SHOW form to add a new course to Mongo "courses" and "lessons" collections</h4>
+                <h4 style="text-align: left"><strong>Path: </strong> /courses/new </h4>
+                <h4 style="text-align: left"><strong>HTTP Verb: </strong> GET</h4>
+                <h4 style="text-align: left"><strong>Mongo Collection: </strong> N/A</h4>
+                <h4 style="text-align: left"><strong>>Mongoose Path: </strong> N/A ()</h4>
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="course name">
                 </div>
@@ -35,12 +33,11 @@
                      <button class="btn btn-lg btn-primary btn-block">Save New Course</button>
                 </div>
             </form>
-            <h4 style="text-align: center">Purpose #2: Submit form and add course to collection </h4>
-            <h4 style="text-align: center">Path: /courses </h4>
-            <h4 style="text-align: center">CRUD: Create</h4>
-            <h4 style="text-align: center">HTTP Verb: POST</h4>
-            <h4 style="text-align: center">Mongo Collection: courses</h4>
-            <h4 style="text-align: center">Mongoose Path: Course.create()</h4>
+            <h4 style="text-align:left"><strong>Purpose #2:  </strong> POST form to CREATE course in Mongo "courses" collection </h4>
+            <h4 style="text-align: left"><strong>Path: </strong> /courses </h4>
+            <h4 style="text-align: left"><strong>HTTP Verb: </strong>POST</h4>
+            <h4 style="text-align: left"><strong>Mongo Collection: </strong>courses</h4>
+            <h4 style="text-align: left"><strong>Mongoose Path: </strong> Course.create()</h4>
             <a href="/courses">Go Back Courses Main Page</a>
         </div>
 
