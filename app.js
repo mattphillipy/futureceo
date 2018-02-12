@@ -16,7 +16,7 @@ var courseRoutes = require("./routes/courses"),
     indexRoutes = require("./routes/index")
     
 var url = process.env.DATABASEURL || "mongodb://localhost/futureceo"
-mongoose.connect(url);
+mongoose.connect("mongodb://bill:bill@ds233228.mlab.com:33228/futureceo1");
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
