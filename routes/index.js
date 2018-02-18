@@ -21,7 +21,7 @@ router.post("/register", function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             
-            return res.redirect("register");
+            return res.redirect("/");
         }
         passport.authenticate("local")(req, res, function(){
             
@@ -39,7 +39,7 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local", 
     {
     successRedirect: "/courses",
-    failureRedirect: "login"
+    failureRedirect: "/"
     }), function(req, res){
 });
 
@@ -47,7 +47,7 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", function(req, res){
     req.logout();    
     
-    res.redirect("/login");
+    res.redirect("/");
 });
 
 

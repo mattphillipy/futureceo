@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="/stylesheets/header.css" rel="stylesheet" type="text/css">
+   
+  
+</head>
+<body>
+<nav class="header-padding navbar navbar-expand-lg navbar-fixed-top  ">
+<div class="container">
+  
+    <a class="navbar-brand" href="/">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/2000px-NYCS-bull-trans-F.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      futureCEO.io</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="header-font-color collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="header-font-color navbar-nav mr-auto">
+        <li class="header-font-color nav-item active">
+          <a class="header-font-color nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="header-font-color nav-link" href="/courses" >Courses</a>
+        </li>
+        <!--<li class="header-font-color nav-item dropdown">-->
+        <!--  <a class="header-font-color nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+        <!--    Courses-->
+        <!--  </a>-->
+        <!--  <div class="header-font-color dropdown-menu" aria-labelledby="navbarDropdown">-->
+        <!--    <a class="dropdown-item" href="/courses">Courses</a>-->
+        <!--    <a class="dropdown-item" href="#">Another action</a>-->
+        <!--    <div class="dropdown-divider"></div>-->
+        <!--    <a class="dropdown-item" href="#">Something else here</a>-->
+        <!--  </div>-->
+        <!--</li>-->
+        <li class="nav-item">
+          <a class="header-font-color nav-link" href="http://discourse.futureceo.io/" target="_blank">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="header-font-color nav-link" href="#" >Blog</a>
+        </li>
+        
+      </ul>
+      </div>
+      <div class ="collapse navbar-collapse navbar-right ">
+        <ul class="nav navbar-nav navbar-right">
+          <% if(!currentUser){ %>
+          <form class="form-inline my-2 my-lg-0" action="/login" method="post">
+          <input class="form-control mr-sm-2" type="text" required="" name="username" placeholder="username" >
+          <input class="form-control mr-sm-2" type="password" required="" name="password" placeholder="Password" >
+          <!--<input class="form-control mr-sm-2" type="text" placeholder="E-mail" aria-label="Search">-->
+          <!--<input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search">-->
+          <button class="btn login-button my-2 my-sm-0" type="submit">Login</button>
+      </form>
+      <% } else { %>
+      <li><a href="#">Signed In As <%= currentUser.username%></a></li>
+                          <li><a class="btn btn-success" href="/logout">Logout</a></li>
+                          <!--<li><a href="/logout">Logout</a></li>-->
+                      <% } %>
+       </ul>
+      </div>
+ </div>   
+  </nav>
+
+
+
+
+
+      

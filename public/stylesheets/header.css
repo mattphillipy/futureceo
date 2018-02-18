@@ -1,0 +1,231 @@
+.navbar-brand {
+    color: #4D4D00;
+}
+
+.nav {
+    color: #4D4D00;
+}
+
+.nav-link: {
+    color: #4D4D00
+}
+
+.header-font-color {
+    color: #4D4D00;
+    font-weight: 500;
+}
+
+.header-padding {
+   padding: 1rem 1rem;
+}
+
+.login-button {
+    color: #fff;
+    background-color: #4D4D00;
+    background-image: none;
+    border-color: #4D4D00;
+}
+
+.middle {
+    background: linear-gradient(180deg,#000033,#00004d);
+    background-size: 2500px 700px,100%;
+    padding: 3.0em 0;
+   
+}
+
+.middle-top-margin {
+    
+}
+
+.page-section {
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.middle-elevator {
+    float: left;
+    margin-left: 4%;
+    width: 48%; 
+}
+
+.middle-container {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.page-section-padding-horizontal {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.middle-elevator:first-child {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.middle-title {
+    color: #fff;
+    font-size: 2.0em;
+    font-weight: 300;
+    margin-bottom: 1.1em;
+    padding: 0;
+}
+
+.middle-form {
+    float: left;
+    margin-left: 4%;
+    /* width: 48%; */
+}
+
+.middle-form-container {
+    margin-left: auto;
+    max-width: 424px;
+}
+
+.join-form {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(95,108,114,.08), 0 2px 18px rgba(95,108,114,.18);
+    padding: 1.5em;
+}
+
+.join-logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 24px;
+    color: inherit;
+    padding: 0 0 0.5em 0;
+}
+
+
+form input[type=text], form input[type=tel] {
+    vertical-align: top;
+}
+
+input[type=text], input[type=password] {
+    background-color: #FFF;
+    border-radius: 3px;
+    border: 1px solid #DADFE2;
+    color: #5F6C72;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 10px;
+    height: 2.5em;
+    width: 100%;
+    padding: 6px;
+    
+}
+
+form button, form .button {
+    padding: 13px 10px;
+}
+
+.join-form-checkbox {
+    margin-bottom: 1em;
+    margin: 0 0 10px;
+    line-height: 1.6em;
+}
+
+.button.button--important {
+    text-align: center;
+    background: #4D4D00;
+    color: #fff;
+    font-size: 1.2em;
+    border-color: transparent;
+}
+
+.button.button--block {
+    width: 100%;
+}
+
+.join-form__join-terms {
+    color: #969ea2;
+    margin-bottom: 0;
+    margin-top: 1em;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+.button.button--as-link {
+    display: inline;
+    font-size: 1em;
+    font-weight: inherit;
+    padding: 0;
+    border: none;
+    color: inherit;
+    overflow: visible;
+    user-select: auto;
+    vertical-align: baseline;
+    white-space: inherit;
+    text-align: inherit;
+    background: none;
+    text-decoration: underline;
+}
+
+.landing-bottom {
+    background: #fff;
+    padding: 2em 0;
+}
+
+.landing-bottom-border {
+    border-top: 1px solid #f1f4f5;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(241, 244, 245);
+}
+
+.landing-bottom-container {
+    margin: 0 auto;
+    max-width: 1120px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.course-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: wrap;
+    -ms-flex-direction: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.fa-icon {
+    font-size: 3em;
+    padding-bottom: 3px;
+}
+
+.course {
+    text-align: center;
+    padding-bottom: 40px;
+    width: 30%;
+}
+
+.subtitle {
+    color: #5F6C72;
+    font-size: 1.3em;
+    font-weight: 600;
+    /* margin-bottom: .5em; */
+    padding: 0;
+}
+
+.description {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+    
+
+
