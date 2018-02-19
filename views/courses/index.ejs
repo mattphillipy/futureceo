@@ -1,34 +1,31 @@
-<% include ../partials/header %>
+<% include ../partials/header_test %>
     
 
 <div class="container">
 
-<header class="jumbotron">
-    <h4></h4>
+<div>
     <div class="container">
-        <h4><strong>Purpose: </strong>List INDEX of all courses in Mongo "courses" collection</h4>
-        <h4><strong>Path: </strong>Path:/courses</h4>
-        <h4><strong>HTTP Verb: </strong>GET</h4>
-        <h4><strong>Mongo Collection: </strong>courses</h4>
-        <h4><strong>Mongoose Path: </strong>Course.find()</h4>
-        <h4></h4>
-        
-        <!--<p>View our hand-picked courses from all over the world</p>-->
+        <h5><strong>RESTful Route:  </strong>Index</h5>
+        <h5><strong>Path: </strong>/courses</h5>
+        <h5><strong>HTTP Verb: </strong>GET</h5>
+        <h5><strong>Purpose: </strong>List all courses in Mongo "courses" collection</h5>
+        <h5><strong>Mongo Collection: </strong>courses</h5>
+        <h5><strong>Mongoose Path: </strong>Course.find()</h5>
         <p> <a class="btn btn-primary btn-lg" href="/courses/new">Add New Course</a></p>
     </div>
-</header>
+</div>
 
 <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-        <div class="col-lg-12">
-            <h3>Series: Real World MBA</h3>
-        </div>
         
         <% courses.forEach(function(course){ %>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 course-summary-border">
                 <div class="thumbnail">
-                    <img src="<%= course.image %>">
                     <div class="caption">
-                         <h4><%= course.name %></h4>
+                         <h5><%= course.name %></h5>
+                         <p class="course-summary">Category:  <%= course.category %></p>
+                         <p class="course-summary">Series:  <%= course.series %></p>
+                         <p class="course-summary">Description:  <%= course.description %></p>
+                         
                     </div>
                     <p>
                         <a href="/courses/<%= course._id %>" class="btn btn-primary">Go To Course</a>
