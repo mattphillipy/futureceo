@@ -230,9 +230,26 @@ form button, form .button {
 
 .course-summary {
     text-align: left;
-    margin: 0;
+    margin: 2px;
 }
 
 .course-summary-border {
     border: 1px solid gray;
+    margin: 2px;
+}
+
+.login-container {
+    margin:  1.0em 400px;
+   
+}
+
+.login-note {
+    margin-left: 400px;
+    
+    margin-bottom: 2em;
+    text-align: center
+}
+
+.login-join-container {
+    margin-left: 500px;
 }

@@ -32,7 +32,8 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     
     
     var newCourse = {name: name, category: category, series: series, description: desc, image: image, };
-    // Create a new course and save to database
+   
+// CREATE a new course and save to database
     Course.create(newCourse, function(err, newlyCreated){
         if(err){
             console.log(err);
