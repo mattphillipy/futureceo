@@ -1,23 +1,33 @@
-<% include ../partials/header %>
+<% include ../partials/header_test %>
 
 <div class="container">
-    <div class="row">
+    
         <h1 style="text-align: center">Add a New Lesson to <%= course.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
             <form action="/courses/<%= course._id %>/lessons" method="POST">
+                <div style="text-align: left"><strong>Purpose #1: </strong>SHOW form to add a new lesson to Mongo "lessons" (full schema) and "courses" (lessons ObjectID only) collections</div>
+                <div style="text-align: left"><strong>Path: </strong> /courses/:id/new </div>
+                <div style="text-align: left"><strong>HTTP Verb: </strong> GET</div>
+                <div style="text-align: left"><strong>Mongo Collection: </strong> courses</div>
+                <div style="text-align: left"><strong>Mongoose Path: </strong> Course.findById ()</div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="lesson[text]" placeholder="text">
+                    <input class="form-control" type="text" name="lesson[text]" placeholder="lesson name">
                 </div>
                 
                 
                 <div class="form-group">
-                     <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                     <button class="btn btn-lg btn-primary btn-block">Save to Add Lesson to Course</button>
                 </div>
+                <div style="text-align:left"><strong>Purpose #2:  </strong> POST form to CREATE course in Mongo "courses" collection </div>
+                    <div style="text-align: left"><strong>Path: </strong> /courses </div>
+                    <div style="text-align: left"><strong>HTTP Verb: </strong>POST</div>
+                    <div style="text-align: left"><strong>Mongo Collection: </strong>lesson, course.lessons</div>
+                    <div style="text-align: left"><strong>Mongoose Path: </strong> Lesson.create</div>
             </form>
             <a href="/courses">Go Back</a>
         </div>
 
-    </div>
+   
 
 </div>
 

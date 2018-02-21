@@ -1,39 +1,39 @@
-<% include ../partials/header %>
+<% include ../partials/header_test %>
 
 
-
-    <h4 style="text-align:left"><strong>Purpose #1:  </strong> SHOW details for one specific course in Mongo "courses" and "lessons" collections </h4>
-    <h4 style="text-align: left"><strong>Path: </strong> courses/:id </h4>
-    <h4 style="text-align: left"><strong>HTTP Verb: </strong>Get</h4>
-    <h4 style="text-align: left"><strong>Mongo Collection: </strong>courses, lessons</h4>
-    <h4 style="text-align: left"><strong>Mongoose Path: </strong>Course.findById</h4>
+<div class="container">
+    <div style="text-align:left"><strong>Purpose #1:  </strong> SHOW details for one specific course in Mongo "courses" and "lessons" collections </div>
+    <div style="text-align: left"><strong>Path: </strong> courses/:id </div>
+    <div style="text-align: left"><strong>HTTP Verb: </strong>Get</div>
+    <div style="text-align: left"><strong>Mongo Collection: </strong>courses, lessons</div>
+    <div style="text-align: left"><strong>Mongoose Path: </strong>Course.findById</div>
     <hr>
     <hr>
-    <p> <strong>Course Name: </strong>  <%=course.name %>  </p>
-        <p> <strong>Category:</strong>  <%=course.category %>  </p>
-        <p> <strong>Series</strong> <%=course.series %>  </p>
-        <p> <strong>Description: </strong> <%=course.description %>  </p>
-        <a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT</a>
+    <div> <strong>Course Name: </strong>  <%=course.name %>  </div>
+        <div> <strong>Category:</strong>  <%=course.category %>  </div>
+        <div> <strong>Series</strong> <%=course.series %>  </div>
+        <div> <strong>Description: </strong> <%=course.description %>  </div>
+        <a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT Course</a>
         <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-danger">Delete</button>    
+            <button class="btn btn-danger">Delete Course</button>    
         </form>
-        <h4></h4>
+        <div></div>
     
     <hr>
-    <span class="pull-left"><a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Lessons</a></span>
+    <span class="pull-left"><a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Lesson to Course</a></span>
     <% course.lessons.forEach(function(lesson){ %>
                 <div class="row">
                     <div class="col-md-12">
                         
-                        <p>
+                        <div>
                             <%=lesson.text %>
-                        </p>
+                        </div>
                         <a class="btn btn-xs btn-warning" 
-                            href="/courses/<%= course._id %>/lessons/<%=lesson._id %>/edit">Edit </a>
+                            href="/courses/<%= course._id %>/lessons/<%=lesson._id %>/edit">Edit Lesson </a>
                         </div>
                 </div>
              <% }) %>
-             
+</div>         
 <% include ../partials/footer %>
 
     
