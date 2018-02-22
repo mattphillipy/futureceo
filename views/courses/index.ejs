@@ -5,12 +5,12 @@
 
 <div>
     <div class="container">
-        <h5><strong>RESTful Route:  </strong>Index</h5>
-        <h5><strong>Path: </strong>/courses</h5>
-        <h5><strong>HTTP Verb: </strong>GET</h5>
-        <h5><strong>Purpose: </strong>List all courses in Mongo "courses" collection</h5>
-        <h5><strong>Mongo Collection: </strong>courses</h5>
-        <h5><strong>Mongoose Path: </strong>Course.find()</h5>
+        <div><strong>RESTful Route:  </strong>Index</div>
+        <div><strong>Path: </strong>/courses</div>
+        <div><strong>HTTP Verb: </strong>GET</div>
+        <div><strong>Purpose: </strong>List all courses in Mongo "courses" collection</div>
+        <div><strong>Mongo Collection: </strong>courses</div>
+        <div><strong>Mongoose Path: </strong>Course.find()</div>
         <p> <a class="btn btn-primary btn-lg" href="/courses/new">Add New Course</a></p>
     </div>
 </div>
@@ -22,9 +22,9 @@
                 <div class="thumbnail">
                     <div class="caption">
                          <h5><%= course.name %></h5>
-                         <p class="course-summary">Category:  <%= course.category %></p>
-                         <p class="course-summary">Series:  <%= course.series %></p>
-                         <p class="course-summary">Description:  <%= course.description %></p>
+                         <div class="course-summary">Category:  <%= course.category %></div>
+                         <div class="course-summary">Series:  <%= course.series %></div>
+                         <div class="course-summary">Description:  <%= course.description %></div>
                          
                     </div>
                     <p>

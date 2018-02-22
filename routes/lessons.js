@@ -5,6 +5,7 @@ var Lesson = require("../models/lesson");
 var middleware = require("../middleware")
 
 
+     
 //Lessons new
 router.get("/new", middleware.isLoggedIn, function(req, res){
     // find course by id
@@ -41,6 +42,18 @@ router.post("/",  middleware.isLoggedIn, function(req, res){
     });
 });
 
+// SHOW - shows more info about one course
+router.get("/:lesson_id", function(req, res){
+   Lesson.findById(req.params.lesson_id, function(err, foundLesson){
+       if(err){
+           res.redirect("back");
+       } else {
+           res.render("lessons/show", {course_id: req.params.id, lesson: foundLesson});
+       }
+   })
+      
+});
+
 // EDIT LESSONS ROUTE
 router.get("/:lesson_id/edit", middleware.isLoggedIn, function(req, res){
    Lesson.findById(req.params.lesson_id, function(err, foundLesson){
@@ -63,5 +76,12 @@ router.put("/:lesson_id", middleware.isLoggedIn, function(req, res){
         }
     });
 });
+
+//INDEX SHOW LESSONS FOR A COURSE
+router.get("/:lesson_id/", function(req, res){
+        res.render("lessons/index");
+});
+
+
 
 module.exports = router;
