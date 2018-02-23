@@ -82,6 +82,18 @@ router.get("/:lesson_id/", function(req, res){
         res.render("lessons/index");
 });
 
+// DESTROY LESSON ROUTE
+router.delete("/:lesson_id", middleware.isLoggedIn, function(req, res){
+   Lesson.findByIdAndRemove(req.params.lesson_id, function(err){
+        if(err){
+            res.redirect("/courses")
+        } else {
+            //req.flash("error", "Course deleted!");
+            res.redirect("/courses/" + req.params.id);
+        }
+    });
+});
+
 
 
 module.exports = router;

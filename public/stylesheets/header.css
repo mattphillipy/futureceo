@@ -253,3 +253,11 @@ form button, form .button {
 .login-join-container {
     margin-left: 500px;
 }
+
+.show-container {
+    padding: 2em;
+}
+
+.show-container-lessons {
+    padding-top: 1em;
+}
