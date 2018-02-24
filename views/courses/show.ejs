@@ -16,9 +16,10 @@
         <div> <strong>Series</strong> <%=course.series %>  </div>
         <div> <strong>Description: </strong> <%=course.description %>  </div>
         
-            <div class="d-inline"><a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT Course</a></div>
-            <div class="d-inline">
-                <form id="delete-form " action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+            <div class="edit-delete-button" >
+                <a class="btn btn-warning" href="/courses/<%= course._id %>/edit">EDIT Course</a>
+            
+                <form class="form-inline " action="/courses/<%= course._id %>?_method=DELETE" method="POST">
                     <button class="btn btn-danger">Delete Course</button>    
                 </form>
             </div>
@@ -29,13 +30,13 @@
             <div><a class="btn btn-success" href="/courses/<%= course._id %>/lessons/new">Add New Lesson to Course</a></div>
             <div class="show-container-lessons">
                 <% course.lessons.forEach(function(lesson){ %>
-                            <div class="row">
+                            <div class=" lesson-row row">
                                 <div class="col-md-12">
-                                    <div>
-                                        <div> <%=lesson.text %></div>
+                                   
+                                        <div> <%=lesson.text %>
                                         <a  class="btn btn-primary" 
                                             href="/courses/<%= course._id %>/lessons/<%=lesson._id %>/">Go to Lesson </a>
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
                          <% }) %>

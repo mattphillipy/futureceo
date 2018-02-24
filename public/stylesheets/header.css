@@ -261,3 +261,12 @@ form button, form .button {
 .show-container-lessons {
     padding-top: 1em;
 }
+
+.lesson-row {
+    padding: 1em;
+}
+
+.edit-delete-button {
+    flex-basis: auto;
+    flex-direction: row;
+}
