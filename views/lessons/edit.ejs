@@ -7,7 +7,10 @@
             <h1 style="text-align: center">Edit Lesson:  <%= lesson.text %></h1>
             <form action="/courses/<%= course_id %>/lessons/<%= lesson._id %>?_method=PUT" method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="lesson[text]" value="<%= lesson.text %>">
+                    <input class="form-control" type="text" name="lesson[name]" value="<%= lesson.name %>">
+                    <input class="form-control" type="text" name="lesson[number]" value="<%= lesson.number %>">
+                    <input class="form-control" type="text" name="lesson[section]" value="<%= lesson.section %>">
+                    <input class="form-control" type="text" name="lesson[description]" value="<%= lesson.description %>">
                 </div>
                 
                 

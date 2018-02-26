@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div style="margin: 25px auto;">
-            <h1 style="text-align: center">Lesson Name:  <%= lesson.text %></h1>
+            <h1 style="text-align: center">Lesson Name:  <%= lesson.name %></h1>
             <a class="btn btn-xs btn-warning" href="/courses/<%= course_id %>/lessons/<%= lesson._id %>/edit">Edit Lesson </a>
             <form id="delete-form " action="/courses/<%= course_id %>/lessons/<%= lesson._id %>?_method=DELETE" method="POST">
                     <button class="btn btn-danger">Delete Lesson</button>    
