@@ -1,0 +1,63 @@
+index.js
+--------
+Index    GET       /                  https://futureceo.io/ 
+Show     GET       /register          https://futureceo.io/register
+Create   POST      /register          https://futureceo.io/register
+                                      <form action="/register" method="post">
+
+Show     GET       /login             https://futureceo.io/login 
+Create   POST      /login             https://futureceo.io/login 
+                                      <form action="/login" method="post">
+
+Show     GET       /logout            <a class="btn btn-success" href="/logout">Logout</a>
+
+
+courses.js
+-----------
+Index     GET     /courses            https://futureceo.io/courses   
+New       GET     /courses/new        https://futureceo.io/courses/new
+
+Create    POST    /courses            https://futureceo.io/courses/new
+                                      action="/courses" method="POST"
+
+Show      GET     /courses/:id        https://futureceo.io/courses/5a84ee06e851f67f40dc5b85
+                                      href="/courses/<%= course._id %>"                                            
+
+Edit      GET     /courses/:id/edit   https://futureceo.io/courses/5a84ee06e851f67f40dc5b85/edit 
+                                      href="/courses/<%= course._id %>/edit"    
+
+Update    PUT     /courses/:id        https://futureceo.io/courses/5a84ee06e851f67f40dc5b85
+                                      action="/courses/<%= course._id%>?_method=PUT" method="POST"
+
+Destroy   DELETE  /courses/:id        https://futureceo.io/courses/5a84ee06e851f67f40dc5b85
+                                      action="/courses/<%= course._id %>?_method=DELETE" method="POST"
+
+
+lessons.js
+----------
+New       GET     /courses/lessons/new            https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons/new
+
+Create    POST    /courses/lessons                https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons
+                                                  action="/courses/<%= course._id %>/lessons" method="POST"
+
+Show      GET     /courses/:id/lessons/:id        https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons/5a905e6f62b4a43cc8ab61a7/
+                                                  href="/courses/<%= course._id %>/lessons/<%=lesson._id %>/"
+
+Edit      GET     /courses/:id/lessons/:id/edit   https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons/5a905e6f62b4a43cc8ab61a7/edit
+                                                  href="/courses/<%= course_id %>/lessons/<%= lesson._id %>/edit"    
+
+Update    PUT     /courses/:id/lessons/:id        https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons/5a905e6f62b4a43cc8ab61a7/
+                                                  action="/courses/<%= course_id %>/lessons/<%= lesson._id %>?_method=PUT" method="POST"
+
+Destroy   DELETE  /courses/:id/lessons/:id        https://futureceo.io/courses/5a8f1856e6876b236202330b/lessons/5a905e6f62b4a43cc8ab61a7/ 
+                                                  action="/courses/<%= course_id %>/lessons/<%= lesson._id %>?_method=DELETE" method="POST"
+
+
+materials.js
+------------
+New       GET     /courses/lessons/materials/new
+Create    POST    /courses/lessons/materials
+Show      GET     /courses/:id/lessons/:id/materials/:id
+Edit      GET     /courses/:id/lessons/:id/materials/:id/edit
+Update    PUT     /courses/:id/lessons/:id/materials/:id 
+Destroy   DELETE  /courses/:id/lessons/:id/materials/:id
